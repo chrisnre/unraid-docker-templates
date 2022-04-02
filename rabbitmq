@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>rabbitmq</Name>
+  <Repository>rabbitmq:3-management</Repository>
+  <Registry>https://hub.docker.com/_/rabbitmq</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:15672]</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/96669</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1648934971</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Service Port" Target="5672" Default="5672" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5672</Config>
+  <Config Name="Management UI Port" Target="15672" Default="15672" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">15672</Config>
+  <Config Name="Data" Target="/var/lib/rabbitmq/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rabbitmq/data</Config>
+  <Config Name="Logs" Target="/var/log/rabbitmq" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rabbitmq/logs</Config>
+  <Config Name="Prometheus Port" Target="15692" Default="15692" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">15692</Config>
+  <Config Name="Enabled Plugins" Target="/etc/rabbitmq/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rabbitmq/config</Config>
+  <Config Name="MQTT" Target="1883" Default="1883" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">1883</Config>
+</Container>
