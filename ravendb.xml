@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RavenDB</Name>
+  <Repository>ravendb/ravendb</Repository>
+  <Registry>https://hub.docker.com/r/ravendb/ravendb/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Some description to go here later...</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://secure.gravatar.com/avatar/7c75edb66759763ac4cc6294cf1908db.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1648934840</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Read the documentation here...</Requires>
+  <Config Name="UI Port" Target="8080" Default="8080" Mode="tcp" Description="Change this to another port for clustering with multiple instances" Type="Port" Display="always" Required="true" Mask="false">8082</Config>
+  <Config Name="Server  Port" Target="38888" Default="38888" Mode="tcp" Description="Change this to another port for clustering with multiple instances" Type="Port" Display="always" Required="true" Mask="false">38888</Config>
+  <Config Name="Configuration" Target="/opt/RavenDB/config" Default="/mnt/cache/appdata/ravendb/config" Mode="rw" Description="Path for configuration files" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/ravendb/config</Config>
+  <Config Name="Database" Target="/opt/RavenDB/Server/RavenData" Default="/mnt/cache/appdata/ravendb/server/ravendata" Mode="rw" Description="Path for database files.  Do not use the same path for multiple instances." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/ravendb/server/ravendata</Config>
+  <Config Name="License Key" Target="RAVEN_License" Default="" Mode="" Description="https://ravendb.net/docs/article-page/5.2/nodejs/server/configuration/license-configuration#license" Type="Variable" Display="always" Required="false" Mask="false">{"Id":"31246932-ab5b-44fa-8912-5d94899abb56","Name":"Christopher Reid-Eriksen","Keys":["sJI20uuhpT41/mEmCd1Ii2Sns","mFFswQqjota66CCvItdWbGmZC","u6r6+mx5Y4Vrxbi1uOi6lNIzu","R3h5y6QvbRgHCgTsFeTU1lNjs","oXRszWwZSjhOVv+DXfy6mIR/b","7XfCtkwUBxtWHf6VlnJ/UnGKd","tMbcA8ogMmPKnj0yenid9AAUE","yBQYHKEkDCgsMDQ4PEBESExQ1","FhcYGRobHEMGRANi7FQ="]}</Config>
+  <Config Name="Log Level" Target="RAVEN_Logs_Mode" Default="Information" Mode="" Description="https://ravendb.net/docs/article-page/5.2/nodejs/server/configuration/logs-configuration#logs.mode" Type="Variable" Display="always" Required="false" Mask="false">Information</Config>
+  <Config Name="Unsecured Access" Target="RAVEN_Security_UnsecuredAccessAllowed" Default="" Mode="" Description="https://ravendb.net/docs/article-page/5.2/nodejs/server/configuration/security-configuration#security.unsecuredaccessallowed" Type="Variable" Display="always" Required="false" Mask="false">PrivateNetwork</Config>
+  <Config Name="Setup Mode" Target="RAVEN_Setup_Mode" Default="None" Mode="" Description="https://ravendb.net/docs/article-page/5.2/nodejs/server/configuration/core-configuration#setup.mode" Type="Variable" Display="always" Required="false" Mask="false">None</Config>
+  <Config Name="EULA Accepted" Target="RAVEN_License_Eula_Accepted" Default="true" Mode="" Description="https://ravendb.net/docs/article-page/5.0/nodejs/server/configuration/license-configuration#license.eula.accepted" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Server URL" Target="RAVEN_ServerUrl" Default="http://0.0.0.0:8080" Mode="" Description="https://ravendb.net/docs/article-page/5.2/nodejs/server/configuration/core-configuration#serverurl" Type="Variable" Display="always" Required="true" Mask="false">http://0.0.0.0:8082</Config>
+  <Config Name="Server URL TCP" Target="RAVEN_ServerUrl_Tcp" Default="tcp://0.0.0.0:38888" Mode="" Description="https://ravendb.net/docs/article-page/5.2/nodejs/server/configuration/core-configuration#serverurl.tcp" Type="Variable" Display="always" Required="true" Mask="false">tcp://0.0.0.0:38888</Config>
+  <Config Name="Public Server URL" Target="RAVEN_PublicServerUrl" Default="http://[IP]:[PORT:8080]/" Mode="" Description="https://ravendb.net/docs/article-page/5.2/nodejs/server/configuration/core-configuration#publicserverurl" Type="Variable" Display="always" Required="false" Mask="false">http://10.10.10.10:8082</Config>
+  <Config Name="Public Server URL TCP" Target="RAVEN_PublicServerUrl_Tcp" Default="tcp://[IP]:[PORT:38888]/" Mode="" Description="https://ravendb.net/docs/article-page/5.2/nodejs/server/configuration/core-configuration#publicserverurl.tcp" Type="Variable" Display="always" Required="false" Mask="false">tcp://10.10.10.10:38888</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Label" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
